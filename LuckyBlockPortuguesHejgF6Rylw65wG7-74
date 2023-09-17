@@ -69,38 +69,6 @@ Tab:AddButton({
 })
 
 local Tab = Window:MakeTab({
-	Name = "📍┃Teleport",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
-Tab:AddButton({
-	Name = "🟣 • Time Roxo",
-	Callback = function()
-      		local destinationPartId = "-925.9014892578125, 193.5000457763672, 286.02874755859375"
-
-local function teleportToDestination(player)
-    local character = player.Character
-    if character then
-        local destinationPart = game.Workspace:FindFirstChild(destinationPartId)
-        if destinationPart then
-            local humanoidRootPart = character:FindFirstChild("HumanoidRootPart")
-            if humanoidRootPart then
-                humanoidRootPart.CFrame = destinationPart.CFrame
-            end
-        end
-    end
-end
-
-local button = script.Parent
-
-button.MouseButton1Click:Connect(function()
-    teleportToDestination(game.Players.LocalPlayer)
-end)
-  	end    
-})
-
-local Tab = Window:MakeTab({
 	Name = "↩️┃Outros",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
